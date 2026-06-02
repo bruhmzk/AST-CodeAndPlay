@@ -19,6 +19,15 @@ El proyecto consiste en el diseño y desarrollo de una plataforma de videojuegos
 | US-09 | Visualizar intento previo      | [#9](https://github.com/AST-Code-Play/Proyecto-Fundamentos-De-Software/issues/9)   |  
 | US-10 | Contador de intentos           | [#10](https://github.com/AST-Code-Play/Proyecto-Fundamentos-De-Software/issues/10) |  
 
+## Chats con Clarita
+
+|  US  | Link | 
+|------|------| 
+| 01-04 | https://chatgpt.com/share/6a1e55a3-881c-83e9-8fc5-2760371735d0 |
+| 05-08 | https://chatgpt.com/share/6a1e55a7-4cc0-83e9-9261-fc47ff800ee4 |
+| 09-10 | https://chatgpt.com/share/6a1e5583-78fc-83e9-b76b-8a7ae85045f6 |
+
+
 ## Requisitos Extrafuncionales
 
 Ver [ReqExtrafuncionales.md](https://github.com/AST-Code-Play/Proyecto-Fundamentos-De-Software/blob/main/ReqExtrafuncionales.md)
