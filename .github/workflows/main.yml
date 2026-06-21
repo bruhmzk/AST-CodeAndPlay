@@ -1,0 +1,68 @@
+name: "Historia de Usuario – Tienda dentro del juego"
+description: >
+  Como jugador activo de la plataforma que ha acumulado moneda virtual mediante
+  partidas completadas, quiero acceder a una tienda dentro del juego donde pueda
+  gastar dicha moneda para adquirir objetos (cosméticos, consumibles o de mejora),
+  para personalizar mi experiencia de juego y sentir que mi progreso en la
+  plataforma tiene recompensas tangibles que me motiven a seguir participando y
+  aportando feedback a la comunidad.
+
+labels:
+  - "user-story"
+  - "feature"
+  - "game-economy"
+  - "inventory"
+
+assignees: []
+
+criterios_de_aceptacion:
+  - id: CA1
+    titulo: "Compra exitosa con saldo suficiente"
+    dado: >
+      El jugador tiene un saldo de moneda virtual igual o mayor al precio del
+      objeto seleccionado y el objeto está disponible en el catálogo.
+    cuando: >
+      El jugador selecciona el objeto y confirma la compra en la interfaz
+      de la tienda.
+    entonces:
+      - El sistema descuenta el precio del saldo del jugador.
+      - El objeto es añadido al inventario del jugador.
+      - El saldo actualizado se muestra en pantalla.
+      - Se presenta una confirmación visual del éxito de la transacción.
+
+  - id: CA2
+    titulo: "Bloqueo de compra por saldo insuficiente"
+    dado: >
+      El saldo de moneda virtual del jugador es menor al precio del objeto
+      deseado.
+    cuando: >
+      El jugador intenta confirmar la compra.
+    entonces:
+      - El sistema impide la transacción.
+      - Se muestra un mensaje indicando fondos insuficientes.
+      - Se resalta visualmente la diferencia entre el precio del objeto y
+        el saldo disponible.
+
+  - id: CA3
+    titulo: "Objeto no disponible en el catálogo"
+    dado: >
+      Un objeto de la tienda ha sido marcado como agotado o retirado
+      temporalmente del catálogo.
+    cuando: >
+      El jugador visualiza ese objeto en la tienda.
+    entonces:
+      - El objeto se muestra con un estado visual de "no disponible".
+      - El botón de compra está deshabilitado.
+      - El objeto permanece visible en el listado de la tienda.
+
+  - id: CA4
+    titulo: "Límite de inventario alcanzado"
+    dado: >
+      El inventario del jugador ha alcanzado su capacidad máxima de
+      almacenamiento.
+    cuando: >
+      El jugador intenta adquirir un nuevo objeto con saldo suficiente.
+    entonces:
+      - El sistema bloquea la compra.
+      - Se notifica al jugador que su inventario está lleno.
+      - Se sugiere al jugador gestionar o liberar espacio antes de continuar.
